@@ -47,6 +47,11 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        if (GetComponentInParent<BlueMovement>() != null)
+            GetComponentInParent<BlueMovement>().enabled = false;
+        else if (GetComponentInParent<RedMovement>() != null)
+            GetComponentInParent<RedMovement>().enabled = false;
+
+        GetComponentInParent<Animator>().SetTrigger("Death");
     }
 }
