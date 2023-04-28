@@ -14,6 +14,10 @@ public class AttackArea : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.GetComponent<Health>() != null)
+        {
             collider.GetComponent<Health>().Damage(damage);
+        }
+        else if (collider.GetComponent<UseItem>() != null)
+            collider.GetComponent<UseItem>().Activate();
     }
 }

@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     [SerializeField] public int damageDealt = 7;
     [SerializeField] private int healing = 1;
-    [SerializeField] private float timeToHeal = 3f;
+    [SerializeField] private float timeToHeal = 1.5f;
     private float timer = 0f;
 
     void Update()
@@ -26,6 +26,7 @@ public class Health : MonoBehaviour
         if (amount > 0)
         {
             this.health -= amount;
+            GetComponentInParent<HealthBar>().SetHp(health);
 
             if (health <= 0)
                 Die();
@@ -35,10 +36,13 @@ public class Health : MonoBehaviour
     public void Heal(int amount)
     {
         if (amount > 0)
+        {
             if (health + amount >= maxHealth)
                 health = maxHealth;
             else
                 health += amount;
+            GetComponentInParent<HealthBar>().SetHp(health);
+        }
     }
 
     private void Die()
