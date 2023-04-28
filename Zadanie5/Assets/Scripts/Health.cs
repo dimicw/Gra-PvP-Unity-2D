@@ -6,17 +6,18 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int health = 100;
     [SerializeField] private int maxHealth = 100;
-    [SerializeField] public int damageDealt = 3;
-    private float timeToRegen = 1f;
+    [SerializeField] public int damageDealt = 7;
+    [SerializeField] private int healing = 1;
+    [SerializeField] private float timeToHeal = 3f;
     private float timer = 0f;
 
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= timeToRegen)
+        if (timer >= timeToHeal)
         {
             timer = 0;
-            Heal(1);
+            Heal(healing);
         }
     }
 
