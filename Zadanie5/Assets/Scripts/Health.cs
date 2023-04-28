@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    public GameObject endScriptHandler;
     [SerializeField] private int health = 100;
     [SerializeField] private int maxHealth = 100;
     [SerializeField] public int damageDealt = 7;
@@ -35,7 +36,7 @@ public class Health : MonoBehaviour
 
     public void Heal(int amount)
     {
-        if (amount > 0)
+        if (amount > 0 && health > 0)
         {
             if (health + amount >= maxHealth)
                 health = maxHealth;
@@ -52,6 +53,18 @@ public class Health : MonoBehaviour
         else if (GetComponentInParent<RedMovement>() != null)
             GetComponentInParent<RedMovement>().enabled = false;
 
+        if (GetComponentInParent<BlueAttack>() != null)
+            GetComponentInParent<BlueAttack>().enabled = false;
+        else if (GetComponentInParent<RedAttack>() != null)
+            GetComponentInParent<RedAttack>().enabled = false;
+
         GetComponentInParent<Animator>().SetTrigger("Death");
+
+        endScriptHandler.GetComponent<EndMenu>().SetWinningName();
+    }
+
+    public int getHeath()
+    {
+        return health;
     }
 }

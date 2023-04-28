@@ -8,6 +8,6 @@ public class GetMusicSettings : MonoBehaviour
 
     private void Awake()
     {
-        audioSource.mute = !(PassMusicSettings.MusicOn);
+        audioSource.mute = !(PassSettings.MusicOn);
     }
 }
