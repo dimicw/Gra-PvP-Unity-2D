@@ -20,6 +20,11 @@ public class EndMenu : MonoBehaviour
         endScreen.SetActive(true);
     }
 
+    public void Rematch()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+    }
+
     public void QuitGame()
     {
         Application.Quit();
