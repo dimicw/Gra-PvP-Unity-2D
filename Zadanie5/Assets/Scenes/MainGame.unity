@@ -984,7 +984,6 @@ GameObject:
   - component: {fileID: 107694857}
   - component: {fileID: 107694856}
   - component: {fileID: 107694855}
-  - component: {fileID: 107694860}
   - component: {fileID: 107694861}
   m_Layer: 0
   m_Name: Chest
@@ -1128,18 +1127,6 @@ Transform:
   m_Father: {fileID: 462764800}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &107694860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107694854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ee22c7b4c86484395012ea9a8fd3ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &107694861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,7 +1389,6 @@ GameObject:
   - component: {fileID: 151047140}
   - component: {fileID: 151047139}
   - component: {fileID: 151047138}
-  - component: {fileID: 151047137}
   - component: {fileID: 151047136}
   m_Layer: 0
   m_Name: Chest (1)
@@ -1441,18 +1427,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Destroyable: 0
   animator: {fileID: 151047141}
---- !u!114 &151047137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151047134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83ee22c7b4c86484395012ea9a8fd3ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &151047138
 BoxCollider2D:
   m_ObjectHideFlags: 0
