@@ -13,10 +13,10 @@ public class EndMenu : MonoBehaviour
 
     public void SetWinningName()
     {
-        if(redPlayer.GetComponent<Health>().getHeath() == 0)
-            nameField.GetComponent<TMP_Text>().text = PassSettings.BlueName;
-        else if (bluePlayer.GetComponent<Health>().getHeath() == 0)
+        if(redPlayer.GetComponent<Health>().getHeath() > 0)
             nameField.GetComponent<TMP_Text>().text = PassSettings.RedName;
+        else if (bluePlayer.GetComponent<Health>().getHeath() > 0)
+            nameField.GetComponent<TMP_Text>().text = PassSettings.BlueName;
         endScreen.SetActive(true);
     }
 
